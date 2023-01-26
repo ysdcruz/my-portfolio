@@ -230,7 +230,7 @@ const Home = ({ mode, setMode }) => {
       // Show loader
       setLoading(true);
       
-      axios.post("http://localhost:3001/send", newMessage)
+      axios.post("/send", newMessage)
         .then(res => {
           console.log(res);
           setAlert({

@@ -11,6 +11,10 @@ mongoose.connect("mongodb+srv://ysa-admin:x59Tn7nBbrUp8WPP@cluster0.42gzlth.mong
 
 app.use("/", require("./routes/messageRoute"));
 
+app.get('/test', (req, res) => {
+  return res.send('<script>console.log("Hello world!")</script>')
+});
+
 if(process.env.NODE_ENV === 'production') {
   app.use(express.static("client/build"));
   app.get("*", (req, res) => {

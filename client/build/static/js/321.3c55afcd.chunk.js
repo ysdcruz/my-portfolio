@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkclient=self.webpackChunkclient||[]).push([[321],{8321:function(o,t,n){n.r(t);var e={top:function(){window.scrollTo({top:0,behavior:"smooth"})},next:function(o){window.scrollTo({top:document.getElementsByTagName("section")[o].getBoundingClientRect().top+window.scrollY,behavior:"smooth"})},section:function(o){window.scrollTo({top:document.getElementById(o).getBoundingClientRect().top+window.scrollY,behavior:"smooth"})}};t.default=e}}]);
+//# sourceMappingURL=321.3c55afcd.chunk.js.map

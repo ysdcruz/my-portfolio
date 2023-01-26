@@ -4,7 +4,7 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const mongoose = require("mongoose");
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 8080;
 
 app.use(cors());
 app.use(express.json());
@@ -24,6 +24,6 @@ if(process.env.NODE_ENV === 'production') {
   });
 }
 
-app.listen(process.env.PORT || 3001, () => {
-  console.log("express server is runnning on port " + port);
+app.listen(port, () => {
+  console.log(`express server is runnning on port ${port}`);
 });

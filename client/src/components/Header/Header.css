@@ -1,0 +1,59 @@
+header {
+	position: absolute;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	top: 0;
+	left: 0;
+	z-index: 500;
+	width: 100%;
+	background-color: var(--color-background);
+}
+
+header.sticky {
+	top: 0;
+	position: fixed;
+	box-shadow: 0 10px 100px rgb(0 0 0 / 10%);
+}
+
+body.transition-after-load header, body.transition-after-load #header__logo {
+	transition: all 0.2s ease-in;
+}
+
+
+@media (min-width: 1px) {
+
+  @media (min-width: 1px) {
+
+		header {
+			padding: 12px 22px;
+		}
+	
+  }
+
+  @media (min-width: 600px) {
+		
+		header {
+			padding: 15px 30px;
+		}
+	
+  }
+
+  @media (min-width: 768px) {
+
+		header {
+			padding: 18px 52px;
+		}
+	
+  }
+
+}
+
+@media (min-width: 992px) {
+	
+	header {
+		padding: 20px 3em;
+	}
+
+}

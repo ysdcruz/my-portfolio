@@ -1,0 +1,62 @@
+.btn-arrow {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 30px;
+  border: 1px solid var(--color-btn);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-arrow::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -110%;
+  height: 110%;
+  width: 110%;
+  background-color: var(--color-btn);
+  z-index: 0;
+  transition: all 0.3s ease-out;
+}
+
+.btn-arrow:hover::after {
+  transform: translateX(98%);
+  -ms-transform: translateX(98%);
+  -moz-transform: translateX(98%);
+  -webkit-transform: translateX(98%);
+}
+
+.btn-arrow > span {
+  display: block;
+  width: calc(100% - 50px);
+  color: var(--color-btn);
+  text-align: center;
+  text-transform: uppercase;
+	font-family: "MadeTommyRegular", "MDPrimerRegular", sans-serif;
+  font-size: 13px;
+  letter-spacing: 4px;
+  z-index: 1;
+  transition: all 0.4s ease-out;
+}
+
+.btn-arrow:hover > span {
+  color: var(--color-background);
+}
+
+.btn-arrow > svg {
+  width: 50px;
+  z-index: 1;
+}
+
+.btn-arrow > svg > path {
+  stroke: var(--color-btn);
+  transition: all 0.4s ease-out;
+}
+
+.btn-arrow:hover > svg > path  {
+  stroke: var(--color-background);
+}

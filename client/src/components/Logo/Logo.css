@@ -1,0 +1,72 @@
+.logo {
+	position: relative;
+	text-decoration: none;
+}
+
+.logo > span {
+	font-family: "MadeTommyMedium", "MDPrimerSemibold", sans-serif;
+	font-weight: bold;
+}
+
+.logo > span:first-child {
+	font-size: 1em;
+}
+
+.logo > span:last-child {
+	position: absolute;
+	display: inline-block;
+	bottom: -2px;
+	color: var(--color-primary);
+}
+
+@media (min-width: 1px) {
+
+  @media (min-width: 1px) {
+
+    .logo {
+      font-size: 30px;
+    }
+
+    .logo > span:last-child {
+      font-size: 42px;
+    }
+
+  }
+
+  @media (min-width: 600px) {
+    
+    .logo {
+      font-size: 34px;
+    }
+
+    .logo > span:last-child {
+      font-size: 46px;
+    }
+
+  }
+
+  @media (min-width: 768px) {
+
+    .logo {
+      font-size: 38px;
+    }
+
+    .logo > span:last-child {
+      font-size: 48px;
+    }
+
+  }
+
+}
+
+@media (min-width: 992px) {
+
+  .logo {
+    font-size: 40px;
+  }
+
+  .logo > span:last-child {
+    font-size: 50px;
+  }
+
+}

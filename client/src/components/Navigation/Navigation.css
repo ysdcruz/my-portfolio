@@ -1,0 +1,209 @@
+@media (min-width: 1px) {
+
+	#one-page-nav {
+		display: none;
+	}
+
+}
+
+@media (min-width: 992px) {
+
+	@media (min-width: 992px) {
+		
+		#one-page-nav ul {
+			width: 70px;
+		}
+
+		#one-page-nav ul:hover {
+			width: 100px;
+		}
+	
+		#active-indicator {
+			right: 33px;
+		}
+	
+		#active-indicator::before {
+			right: 0;
+		}
+	
+		#one-page-nav li {
+			right: 32px;
+		}
+	
+	}
+
+	@media (min-width: 1200px) {
+
+		#one-page-nav ul {
+			width: 90px;
+		}
+
+		#one-page-nav ul:hover {
+			width: 120px;
+		}
+	
+		#active-indicator {
+			right: 3em;
+		}
+	
+		#active-indicator::before {
+			right: 2px;
+		}
+	
+		#one-page-nav li {
+			right: 3em;
+		}
+	
+	}
+
+	#one-page-nav {
+		position: fixed;
+		z-index: 300;
+		top: 0;
+		right: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 100vh;
+	}
+
+	#one-page-nav ul {
+		position: relative;
+		list-style: none;
+	}
+
+	#active-indicator {
+		position: absolute;
+		display: block;
+		height: 20px;
+		width: 20px;
+		z-index: 0;
+	}
+
+	body.transition-after-load #active-indicator {
+		transition: all 0.25s ease-in-out;
+	}
+
+	#active-indicator::before {
+		content: "";
+		position: absolute;
+		display: block;
+		top: 1px;
+		margin: 1px 0;
+		height: 12px;
+		width: 12px;
+		background-color: var(--color-primary);
+		border-radius: 50%;
+	}
+
+	#one-page-nav ul:hover #active-indicator {
+		height: 60px;
+	}
+
+	#one-page-nav li {
+		position: relative;
+		height: 20px;
+		z-index: 1;
+		transition: all 0.25s ease-in-out;
+	}
+
+	#one-page-nav ul:hover li {
+		height: 60px;
+	}
+
+	.nav__links {
+		position: relative;
+		display: flex;
+		right: 0;
+		height: 1.1em;
+		width: 100%;
+		color: var(--color-text-default);
+		text-decoration: none;
+		text-transform: uppercase;
+		transition: all 0.25s ease-in-out;
+	}
+
+	.nav__links > span {
+		position: absolute;
+		top: 0;
+		right: 28px;
+		padding: 1px 6px;
+		width: max-content;
+		text-align: right;
+		font-size: 12px;
+		font-family: "MadeTommyLight", "MDPrimerLight", sans-serif;
+		letter-spacing: 2px;
+		color: var(--color-background);
+		background-color: var(--color-text-default);
+		border-radius: 3px;
+		visibility: hidden;
+		opacity: 0;
+		transform: translateX(100%);
+		-ms-transform: translateX(100%);
+		-moz-transform: translateX(100%);
+		-webkit-transform: translateX(100%);
+		transition: all 0.25s ease-in-out;
+	}
+
+	#one-page-nav ul:hover span:not(#active-indicator) {
+		visibility: visible;
+		transform: translateX(0);
+		-ms-transform: translateX(0);
+		-moz-transform: translateX(0);
+		-webkit-transform: translateX(0);
+	}
+
+	ul:hover .nav__links:not(.active) > span {
+		opacity: 0.4;
+	}
+
+	ul:hover .nav__links.active > span {
+		background-color: var(--color-primary);
+		opacity: 0.9;
+	}
+
+	#one-page-nav ul:hover .nav__links:not(.active) span:not(#active-indicator):hover {
+		opacity: 0.7;
+	}
+
+	.nav__links:not(.nav__links[href='#home'])::before {
+		content: "";
+		position: absolute;
+		display: block;
+		top: -210%;
+		right: 7px;
+		margin: 1px 0;
+		height: 30px;
+		max-height: 0;
+		width: 1px;
+		background-color: var(--color-text-default);
+		visibility: hidden;
+		opacity: 0;
+		transition: all 0.25s ease-in-out;
+	}
+
+	#one-page-nav ul:hover .nav__links:not(.nav__links[href='#home'])::before {
+		max-height: 30px;
+		visibility: visible;
+		opacity: 1;
+	}
+
+	.nav__links::after {
+		content: "";
+		position: absolute;
+		display: block;
+		top: 4px;
+		right: 4px;
+		margin: 1px 0;
+		height: 6px;
+		width: 6px;
+		border: 1px solid var(--color-text-default);
+		border-radius: 50%;
+		transition: all 0.25s ease-in-out;
+	}
+
+	.nav__links.active::after {
+		border: 1px solid var(--color-primary);
+	}
+	
+}

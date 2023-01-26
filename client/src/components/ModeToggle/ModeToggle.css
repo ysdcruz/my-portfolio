@@ -1,0 +1,71 @@
+#mode-toggle-container {
+  overflow: hidden;
+  position: relative;
+  height: 2em;
+  width: 2em;
+}
+
+#mode-toggle {
+  display: none;
+}
+
+#mode-toggle-box {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  bottom: 0;
+  height: 200%;
+  width: 100%;
+  cursor: pointer;
+}
+
+body.transition-after-load #mode-toggle-box { 
+  transition: all 0.2s ease-in-out;
+}
+
+#mode-toggle-box div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  font-size: 16px;
+}
+
+#mode-toggle-box div > svg {
+  height: 70%;
+  width: 70%;
+  stroke: var(--color-text-default);
+}
+
+body.transition-after-load #mode-toggle-box div {
+  transition: visibility 0.2s ease-in, opacity 0.2s ease-in;
+}
+
+body:not(.dark--scheme) #mode-toggle-box {
+  transform: translateY(50%);
+  -ms-transform: translateY(50%);
+  -moz-transform: translateY(50%);
+  -webkit-transform: translateY(50%);
+}
+
+body:not(.dark--scheme) #light-mode-toggle {
+  opacity: 0;
+  visibility: hidden;
+}
+
+body.dark--scheme #light-mode-toggle {
+  opacity: 1;
+  visibility: visible;
+}
+
+body:not(.dark--scheme) #dark-mode-toggle {
+  opacity: 1;
+  visibility: visible;
+}
+
+body.dark--scheme #dark-mode-toggle {
+  opacity: 0;
+  visibility: hidden;
+}
+

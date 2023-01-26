@@ -1,3 +1,5 @@
+require("dotenv").config();
+const path = require("path");
 const express = require("express");
 const app = express();
 const cors = require("cors");
@@ -7,7 +9,7 @@ const port = process.env.PORT || 3001;
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect("mongodb+srv://ysa-admin:x59Tn7nBbrUp8WPP@cluster0.42gzlth.mongodb.net/portfolioDB");
+mongoose.connect(process.env.MONGO_URI);
 
 app.use("/", require("./routes/messageRoute"));
 

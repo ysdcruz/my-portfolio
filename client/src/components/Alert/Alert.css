@@ -5,9 +5,10 @@
   align-items: center;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100% !important;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.828);
+  background-color: rgba(0, 0, 0, 0.828) !important;
+  border-radius: 0 !important;
   z-index: 600;
   transition: all 0.2s cubic-bezier(.67,.27,.35,.88);
 }

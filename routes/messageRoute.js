@@ -6,7 +6,6 @@ router.route("/send").post((req, res) => {
   const name = req.body.name;
   const email = req.body.email;
   const message = req.body.message;
-  const datetime = req.body.datetime;
   const newMessage = new Message({
     name,
     email,

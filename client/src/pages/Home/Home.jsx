@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import axios from 'axios'
 
 import './Home.css'
 
@@ -10,6 +11,7 @@ import Modal from '../../components/Modal/Modal'
 import Footer from '../../components/Footer/Footer'
 import SectionScrollObserver from '../../helpers/SectionScrollObserver'
 import ScrollTop from '../../components/ScrollTop/ScrollTop'
+import Alert from '../../components/Alert/Alert'
 
 import Me from './../../images/about/ysadc.png'
 
@@ -159,6 +161,98 @@ const Home = ({ mode, setMode }) => {
     });
   }
 
+  const [inputValue, setInputValue] = useState(
+    {
+      name: "",
+      email: "",
+      message: "",
+      nameValid: false,
+      emailValid: false,
+      emailError: "Email address cannot be empty.",
+      messageValid: false
+    }
+  );
+
+  const [alert, setAlert] = useState({
+    isOpen: false,
+    status: ""
+  });
+
+  const [loading, setLoading] = useState(false);
+
+  const resetForm = () => {
+    // Reset state and form
+    setInputValue({
+      name: "",
+      email: "",
+      message: "",
+      nameValid: false,
+      emailValid: false,
+      emailError: "Email address cannot be empty.",
+      messageValid: false
+    });
+
+    document.getElementById("message-form").reset();
+      
+    setAlert({
+      isOpen: false,
+      status: "",
+    });
+
+    [...document.querySelectorAll(".form--group")].forEach(nav => {
+      nav.classList.remove("input--focus", "input--error");
+    });
+  }
+  
+  const handleSubmit = (evt) => {
+    evt.preventDefault();
+
+    var inputFields = document.getElementsByClassName("form--group");
+
+    if(!(inputValue.nameValid && inputValue.emailValid && inputValue.messageValid)) {
+      if(!inputValue.nameValid)
+        inputFields[0].classList.add("input--focus", "input--error");
+
+      if(!inputValue.emailValid) {
+        inputFields[1].querySelector(".error--wrapper").innerHTML = inputValue.emailError;
+        inputFields[1].classList.add("input--focus", "input--error");
+      }
+        
+      if(!inputValue.messageValid)
+        inputFields[2].classList.add("input--focus", "input--error");
+    } else {
+      const newMessage = {
+        name: inputValue.name,
+        email: inputValue.email,
+        message: inputValue.message
+      }
+
+      // Show loader
+      setLoading(true);
+      
+      axios.post("http://localhost:3001/send", newMessage)
+        .then(res => {
+          console.log(res);
+          setAlert({
+            isOpen: true,
+            status: "success"
+          });
+    
+          setLoading(false);
+        })
+        .catch((err) => {
+          console.log(err);
+          
+          setAlert({
+            isOpen: true,
+            status: "failed"
+          });
+    
+          setLoading(false);
+        });
+    }
+  }
+
   useEffect(() => {
     SectionScrollObserver.enable(observer);
 
@@ -177,6 +271,9 @@ const Home = ({ mode, setMode }) => {
       link.addEventListener("click", scrollTo);
     });
   
+    if(alert.isOpen === false && alert.status === "success") {
+      resetForm();
+    }
   });
 
   return (
@@ -480,8 +577,9 @@ const Home = ({ mode, setMode }) => {
                 <h2>Get In Touch</h2>
                 <p>Feel free to send me a message and I'll get back to you!</p>
               </div>
-              <MessageForm className='content-center' />
+              <MessageForm className='content-center' inputValue={inputValue} setInputValue={setInputValue} handleSubmit={handleSubmit} loading={loading} />
             </div>
+            {alert.isOpen && <Alert alert={alert} closeAlert={setAlert} successTitle='Your message was sent successfully.' successMsg='Thank you for messaging me. I&apos;ll get back to you as soon as possible!' failedTitle='Your message could not be sent.' failedMsg='Something went wrong. Don&apos;t worry, let&apos;s try again.'/>}
           </div>
         </section>
       </main>

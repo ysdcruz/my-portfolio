@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import axios from 'axios'
 
 import './Home.css'
 
@@ -47,6 +46,7 @@ import Plant8Page from './../../images/projects/preview/plant8.png'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCaretUp } from '@fortawesome/free-solid-svg-icons'
+import { sendMessage } from '../../services/Api'
 
 const Home = ({ mode, setMode }) => {
 
@@ -204,44 +204,45 @@ const Home = ({ mode, setMode }) => {
     });
   }
   
-  const handleSubmit = (evt) => {
+  const handleSubmit = async(evt) => {
     evt.preventDefault();
 
-    var inputFields = document.getElementsByClassName("form--group");
+    if(!loading) {
+      var inputFields = document.getElementsByClassName("form--group");
 
-    if(!(inputValue.nameValid && inputValue.emailValid && inputValue.messageValid)) {
-      if(!inputValue.nameValid)
-        inputFields[0].classList.add("input--focus", "input--error");
+      if(!(inputValue.nameValid && inputValue.emailValid && inputValue.messageValid)) {
+        if(!inputValue.nameValid)
+          inputFields[0].classList.add("input--focus", "input--error");
 
-      if(!inputValue.emailValid) {
-        inputFields[1].querySelector(".error--wrapper").innerHTML = inputValue.emailError;
-        inputFields[1].classList.add("input--focus", "input--error");
-      }
-        
-      if(!inputValue.messageValid)
-        inputFields[2].classList.add("input--focus", "input--error");
-    } else {
-      const newMessage = {
-        name: inputValue.name,
-        email: inputValue.email,
-        message: inputValue.message
-      }
+        if(!inputValue.emailValid) {
+          inputFields[1].querySelector(".error--wrapper").innerHTML = inputValue.emailError;
+          inputFields[1].classList.add("input--focus", "input--error");
+        }
+          
+        if(!inputValue.messageValid)
+          inputFields[2].classList.add("input--focus", "input--error");
+      } else {
+        const newMessage = {
+          name: inputValue.name,
+          email: inputValue.email,
+          message: inputValue.message
+        }
 
-      // Show loader
-      setLoading(true);
-      
-      axios.post("/send", newMessage)
-        .then(res => {
-          console.log(res);
+        // Show loader
+        setLoading(true);
+
+        const response = await sendMessage(newMessage);
+
+        if(response.status === 200) {
+          console.log(response);
           setAlert({
             isOpen: true,
             status: "success"
           });
     
           setLoading(false);
-        })
-        .catch((err) => {
-          console.log(err);
+        } else {
+          console.log(response);
           
           setAlert({
             isOpen: true,
@@ -249,7 +250,8 @@ const Home = ({ mode, setMode }) => {
           });
     
           setLoading(false);
-        });
+        }
+      }
     }
   }
 

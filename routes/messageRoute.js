@@ -1,20 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const Message = require("../models/messageModel");
+const controllers = require("../controllers/messageControllers");
 
-router.route("/send").post((req, res) => {
-  const name = req.body.name;
-  const email = req.body.email;
-  const message = req.body.message;
-  const newMessage = new Message({
-    name,
-    email,
-    message
-  });
-
-  newMessage.save();
-
-  res.send("Message sent.");
-});
+router.post("/send", controllers.createMessage);
+router.get("/all", controllers.getAllMessages);
 
 module.exports = router;

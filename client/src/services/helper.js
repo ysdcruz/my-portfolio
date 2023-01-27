@@ -1,0 +1,1 @@
+export const BASE_URL = "https://portfolio-backend-vuyw.onrender.com";

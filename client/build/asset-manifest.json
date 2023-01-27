@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/static/css/main.e2dec152.css",
-    "main.js": "/static/js/main.e2228af7.js",
-    "static/css/699.2cbad3c7.chunk.css": "/static/css/699.2cbad3c7.chunk.css",
-    "static/js/699.8c8c4d3a.chunk.js": "/static/js/699.8c8c4d3a.chunk.js",
+    "main.js": "/static/js/main.6bacc3b1.js",
+    "static/css/535.ec2975ce.chunk.css": "/static/css/535.ec2975ce.chunk.css",
+    "static/js/535.d8b528be.chunk.js": "/static/js/535.d8b528be.chunk.js",
     "static/js/787.c4e7f8f9.chunk.js": "/static/js/787.c4e7f8f9.chunk.js",
     "static/js/321.3c55afcd.chunk.js": "/static/js/321.3c55afcd.chunk.js",
     "static/js/146.467f3eba.chunk.js": "/static/js/146.467f3eba.chunk.js",
@@ -18,6 +18,7 @@
     "static/media/MADE TOMMY Regular.otf": "/static/media/MADE TOMMY Regular.101be848d2d18e7296bc.otf",
     "static/media/MADE TOMMY Medium.otf": "/static/media/MADE TOMMY Medium.a1a50e698ce7cd493ce1.otf",
     "static/media/MADE TOMMY Black.otf": "/static/media/MADE TOMMY Black.3183c62623238bdddbbf.otf",
+    "static/media/DelaCruz_Ysabel_CV.pdf": "/static/media/DelaCruz_Ysabel_CV.eab0453b2c123f0fa451.pdf",
     "static/media/MADE TOMMY Light.otf": "/static/media/MADE TOMMY Light.baa9639fea2a3259ba0b.otf",
     "static/media/MADE TOMMY Thin.otf": "/static/media/MADE TOMMY Thin.ed78c9e1d711bba4e32c.otf",
     "static/media/MDPrimerTest-Black.otf": "/static/media/MDPrimerTest-Black.df4c27b758b981f797f7.otf",
@@ -50,15 +51,15 @@
     "static/media/html5.svg": "/static/media/html5.f318c8b1d5945fa9adc827ae94849cb1.svg",
     "static/media/reactjs.svg": "/static/media/reactjs.928f956d9c8ebcffb98a8e917154a81a.svg",
     "main.e2dec152.css.map": "/static/css/main.e2dec152.css.map",
-    "main.e2228af7.js.map": "/static/js/main.e2228af7.js.map",
-    "699.2cbad3c7.chunk.css.map": "/static/css/699.2cbad3c7.chunk.css.map",
-    "699.8c8c4d3a.chunk.js.map": "/static/js/699.8c8c4d3a.chunk.js.map",
+    "main.6bacc3b1.js.map": "/static/js/main.6bacc3b1.js.map",
+    "535.ec2975ce.chunk.css.map": "/static/css/535.ec2975ce.chunk.css.map",
+    "535.d8b528be.chunk.js.map": "/static/js/535.d8b528be.chunk.js.map",
     "787.c4e7f8f9.chunk.js.map": "/static/js/787.c4e7f8f9.chunk.js.map",
     "321.3c55afcd.chunk.js.map": "/static/js/321.3c55afcd.chunk.js.map",
     "146.467f3eba.chunk.js.map": "/static/js/146.467f3eba.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e2dec152.css",
-    "static/js/main.e2228af7.js"
+    "static/js/main.6bacc3b1.js"
   ]
 }

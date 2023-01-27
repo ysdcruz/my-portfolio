@@ -14,6 +14,8 @@ import Alert from '../../components/Alert/Alert'
 
 import Me from './../../images/about/ysadc.png'
 
+import CV from './../../files/cv/DelaCruz_Ysabel_CV.pdf'
+
 import SoftDev from './../../images/skills/software-svgrepo-com.svg'
 import WebDev from './../../images/skills/responsive-svgrepo-com.svg'
 import HTMLLogo from './../../images/skills/tools/html5.svg'
@@ -317,7 +319,7 @@ const Home = ({ mode, setMode }) => {
               <div className='content--grid'>
                 <p className='hidden'>Hi! I'm an IT fresh gradute from Caloocan, Philippines and I love seeing my ideas come to life. As someone who enjoys programming, I am passionate in helping people through the use of technology.</p>
                 <p className='hidden'>My main focus is on web development (you can view some of my <a href="#projects" className='bounce-bg-effect scroll-to hoverable' onClick={scrollTo}>projects</a> below) but I can build softwares, too. I'm open to job opportunities where I can continuously learn and grow my career. Feel free to <a href="#contact" className='bounce-bg-effect scroll-to hoverable'onClick={scrollTo}>message</a> me or connect with me through my <a href='https://www.linkedin.com/in/ysabel-dela-cruz/' target='_blank' rel='noopener noreferrer' className='bounce-bg-effect hoverable'>LinkedIn account</a>.</p>
-                <a href='./../../files/cv/DelaCruz_Ysabel_CV.pdf' target='_blank' className='btn--wrapper hidden' download><Button text='My Resume' hasArrow={true} color='var(--color-secondary)' /></a>
+                <a href={CV} target='_blank' rel='noopener noreferrer' className='btn--wrapper hidden'><Button text='My Resume' hasArrow={true} color='var(--color-secondary)' /></a>
               </div>
             </div>
           </div>

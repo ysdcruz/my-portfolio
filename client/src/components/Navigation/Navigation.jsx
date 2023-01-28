@@ -44,7 +44,7 @@ const Navigation = ({ observer }) => {
   
         var a = document.createElement("a");
         a.href = "#" + secName;
-        a.className = "nav__links";
+        a.className = "nav__links hoverable";
         a.addEventListener("click", (evt) => {
           onClick(evt);
         });

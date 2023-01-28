@@ -36,7 +36,7 @@
   color: var(--color-btn);
   text-align: center;
   text-transform: uppercase;
-	font-family: "MadeTommyRegular", "MDPrimerRegular", sans-serif;
+  font-family: var(--font-regular);
   font-size: 13px;
   letter-spacing: 4px;
   z-index: 1;

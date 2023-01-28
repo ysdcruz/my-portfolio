@@ -263,7 +263,7 @@ const Home = ({ mode, setMode }) => {
     if(document.querySelector('#projects .cell__image > img').style.transitionDuration === '')
       setTimeout(() => {
         projectAnimation();
-      }, 1000);
+      }, 1500);
 
     const home = document.querySelector('#home > .section--wrapper');
 

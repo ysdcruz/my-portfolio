@@ -86,13 +86,13 @@
 }
 
 .modal__close--container > p, .modal__close--container > p > span {
-  font-family: "MadeTommyRegular", "MDPrimerRegular", sans-serif;
+  font-family: var(--font-regular);
 }
 
 .modal__content--wrapper > h5 {
   margin: 1.5em 0 1.2em;
   color: var(--color-heading);
-  font-family: "MadeTommyMedium", "MDPrimerSemibold", sans-serif;
+  font-family: var(--font-medium);
 }
 
 .modal__image {
@@ -136,7 +136,7 @@
 
 .modal__content p {
   margin: 14px 0;
-  font-family: "MadeTommyLight", "MDPrimerLight", sans-serif;
+  font-family: var(--font-light);
   line-height: 1.5em;
 }
 
@@ -150,7 +150,7 @@
   padding: 6px 10px;
   color: var(--color-text-default);
   background-color: var(--color-tag);
-  font-family: "MadeTommyLight", "MDPrimerLight", sans-serif;
+  font-family: var(--font-light);
   border-radius: 4px;
 }
 
@@ -183,7 +183,7 @@ body.dark--scheme .modal__link {
 
 .modal__link > span {
   color: var(--color-background);
-  font-family: "MadeTommyRegular", "MDPrimerRegular", sans-serif;
+  font-family: var(--font-regular);
   letter-spacing: 1px;
 }
 

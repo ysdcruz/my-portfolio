@@ -42,7 +42,7 @@ const ScrollTop = () => {
   });
 
   return (
-    <div id='scroll-top' onClick={ 
+    <div id='scroll-top' className='hoverable' onClick={ 
       () => {
         import('../../helpers/ScrollSection').then(module => {
           module.default.top();

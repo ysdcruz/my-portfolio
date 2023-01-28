@@ -98,7 +98,7 @@ const Modal = ({ openModal, setOpenModal, origin }) => {
     <div className={`modal--wrapper ${openModal.isOpen ? 'show-modal' : ''} flex-col`} onClick={handleClick}>
       <aside className='modal__main flex-col'>
         <div className='modal__close--container flex-row'>
-          <div className='modal__close' onClick={handleModal}>
+          <div className='modal__close hoverable' onClick={handleModal}>
           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
             <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
@@ -115,7 +115,7 @@ const Modal = ({ openModal, setOpenModal, origin }) => {
             </g>
           </svg>
           </div>
-          <p className='underline-effect' onClick={handleModal}>{origin}<span>.</span></p>
+          <p className='underline-effect hoverable' onClick={handleModal}>{origin}<span>.</span></p>
         </div>
         <div className='modal__content--wrapper'>
         </div>

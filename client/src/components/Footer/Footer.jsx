@@ -8,7 +8,7 @@ const Footer = () => {
         <div>
           <Logo id="footer__logo" />
           <div className='footer__link--container flex-row'>
-            <a href='mailto:delacruz.ysa@gmail.com' target='_blank' rel='noopener noreferrer'>
+            <a href='mailto:delacruz.ysa@gmail.com' className='hoverable' data-tooltip='Send an email' target='_blank' rel='noopener noreferrer'>
               <svg viewBox='0 0 32 32' style={{ fill: 'var(--footer-text)', fillRule: 'evenodd', clipRule: 'evenodd', strokeLinejoin: 'round', strokeMiterlimit: 2 }} version='1.1' xmlns='http://www.w3.org/2000/svg' >
                 <g id='SVGRepo_bgCarrier' strokeWidth='0'></g>
                 <g id='SVGRepo_tracerCarrier' strokeLinecap='round' strokeLinejoin='round'></g>
@@ -18,7 +18,7 @@ const Footer = () => {
                 </g>
               </svg>
             </a>
-            <a href='https://www.linkedin.com/in/ysabel-dela-cruz/' target='_blank' rel='noopener noreferrer'>
+            <a href='https://www.linkedin.com/in/ysabel-dela-cruz/' className='hoverable' data-tooltip='Connect with me' target='_blank' rel='noopener noreferrer'>
               <svg viewBox='-2.2 -2.2 48.40 48.40' version='1.1' xmlns='http://www.w3.org/2000/svg' style={{ fill: 'var(--footer-text)' }} >
                 <g id='SVGRepo_bgCarrier' strokeWidth='0'></g>
                 <g id='SVGRepo_tracerCarrier' strokeLinecap='round' strokeLinejoin='round'></g>
@@ -31,7 +31,7 @@ const Footer = () => {
                 </g>
               </svg>
             </a>
-            <a href='https://github.com/ysdcruz' target='_blank' rel='noopener noreferrer'>
+            <a href='https://github.com/ysdcruz' target='_blank' className='hoverable' data-tooltip='View repositories' rel='noopener noreferrer'>
               <svg fill='#ffffff' viewBox='0 0 32 32' version='1.1' xmlns='http://www.w3.org/2000/svg'>
                 <g id='SVGRepo_bgCarrier' strokeWidth='0'></g>
                 <g id='SVGRepo_tracerCarrier' strokeLinecap='round' strokeLinejoin='round'></g>

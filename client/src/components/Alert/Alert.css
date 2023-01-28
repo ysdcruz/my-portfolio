@@ -399,7 +399,7 @@
 }
 
 .alert__content--wrapper > h5 {
-  font-family: "MadeTommyMedium", "MDPrimerSemibold", sans-serif;
+  font-family: var(--font-medium);
 }
 
 .alert__content--wrapper > p {

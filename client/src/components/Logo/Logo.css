@@ -4,7 +4,7 @@
 }
 
 .logo > span {
-	font-family: "MadeTommyMedium", "MDPrimerSemibold", sans-serif;
+  font-family: var(--font-medium);
 	font-weight: bold;
 }
 

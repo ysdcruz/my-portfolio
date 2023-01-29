@@ -14,5 +14,5 @@ A portfolio website created using MERN stack
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
-<a href="https://linkedin.com/in/ysabel-dela-cruz" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="ysabel-dela-cruz" height="30" width="40" /></a><a href="mailto:delacruz.ysa@gmail.com" target="blank"><img align="center" src="https://commons.wikimedia.org/wiki/File:Gmail_icon_(2020).svg" alt="delacruz.ysa@gmail.com" height="30" width="40" /></a>
+<a href="https://linkedin.com/in/ysabel-dela-cruz" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="ysabel-dela-cruz" height="30" width="40" /></a><a href="mailto:delacruz.ysa@gmail.com" target="blank"><img align="center" src="https://cdn.cdnlogo.com/logos/g/24/gmail-icon.svg" alt="delacruz.ysa@gmail.com" height="30" width="40" /></a>
 </p>

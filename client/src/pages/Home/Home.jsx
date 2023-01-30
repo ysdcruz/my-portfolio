@@ -535,7 +535,7 @@ const Home = ({ mode, setMode }) => {
                   </div>
                 </div>
               </div>
-              <div className='cell--grid cell-md last-order first-order-resp hidden hoverable' data-tooltip='Learn more!' data-title='College of Computer and Information Sciences' data-about='<p>The College of Computer and Information Sciences is a website that works as a college platform to disseminate news and announcements. The website has an integrated discussion forum and document request system to improve college communication, processes, and transactions.</p><p>This was a capstone project for my senior year and was deployed for a month for user testing and evaluation.</p>' onClick={handleModal}>
+              <div className='cell--grid cell-md last-order first-order-resp hidden hoverable' data-tooltip='Learn more!' data-title='College of Computer and Information Sciences' data-about='<p>The College of Computer and Information Sciences is a website that works as a college platform to disseminate news and announcements. The website has an integrated discussion forum and document request system to improve college communication, processes, and transactions.</p><p>This was a capstone project for my senior year and was deployed for a month for user testing and evaluation.</p>' data-link='https://ysdcruz.github.io/ccis-demo.ph/' data-link_label='View Demo' onClick={handleModal}>
                 <div className='cell__image'>
                   <img src={CCISPage} alt='College of Computer and Information Sciences' />
                 </div>
@@ -552,7 +552,7 @@ const Home = ({ mode, setMode }) => {
                   </div>
                 </div>
               </div>
-              <div className='cell--grid cell-sm hidden hoverable' data-tooltip='Learn more!' data-title='Plant 8' data-about='<p>Plant 8 showcases various ornamental plants that the small business offers to its buyers. It lets the admin understand customers&rsquo; behavioral pattern and automatically update recommendated products based on the user&rsquo;s cart through the integrated market basket analysis algorithm in the website.</p>' onClick={handleModal}>
+              <div className='cell--grid cell-sm hidden hoverable' data-tooltip='Learn more!' data-title='Plant 8' data-about='<p>Plant 8 showcases various ornamental plants that the small business offers to its buyers. It lets the admin understand customers&rsquo; behavioral pattern and automatically update recommendated products based on the user&rsquo;s cart through the integrated market basket analysis algorithm in the website.</p>' data-link='https://ysdcruz.github.io/plant8.ph/' data-link_label='View Demo' onClick={handleModal}>
                 <div className='cell__image'>
                   <img src={Plant8Page} alt='Plant 8' />
                 </div>

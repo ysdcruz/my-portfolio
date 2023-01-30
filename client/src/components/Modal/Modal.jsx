@@ -41,7 +41,8 @@ const Modal = ({ openModal, setOpenModal, origin }) => {
   }
 
   const handleLink = (evt) => {
-    window.open(evt.target.href, "_blank");
+    var link = evt.target.closest(".modal__link");
+    window.open(link.href, "_blank");
   }
 
   const link = openModal.link !== null ? 
